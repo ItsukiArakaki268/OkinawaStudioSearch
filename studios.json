@@ -2,65 +2,71 @@
     "studios": [
         {
             "id": 1,
-            "name": "スタジオ1",
+            "name": "音楽STUDIO 8528",
             "room": [{
                 "id": 1,
                 "name": "Aスタジオ",
-                "price": 1400,
-                "maxMembers": 4
-            },
-            {
-                "id": 2,
-                "name": "Bスタジオ",
-                "price": 1200,
-                "maxMembers": 4
-            }
-            ],
-            "businessHours": {
-                "open": 8,
-                "close": 17
-            }
-        },
-        {
-            "id": 2,
-            "name": "スタジオ2",
-            "room": [{
-                "id": 1,
-                "name": "Aスタジオ",
-                "price": 1700,
-                "maxMembers": 4
-            },
-            {
-                "id": 2,
-                "name": "Bスタジオ",
-                "price": 1700,
-                "maxMembers": 4
-            }
-            ],
-            "businessHours": {
-                "open": 9,
-                "close": 22
-            }
-        },
-        {
-            "id": 3,
-            "name": "スタジオ3",
-            "room": [{
-                "id": 1,
-                "name": "Aスタジオ",
-                "price": 2000,
-                "maxMembers": 4
+                "price": 1800,
+                "maxMembers": 6
             },
             {
                 "id": 2,
                 "name": "Bスタジオ",
                 "price": 1500,
+                "maxMembers": 5
+            },
+            {
+                "id": 3,
+                "name": "Cスタジオ",
+                "price": 1400,
                 "maxMembers": 4
             }
             ],
             "businessHours": {
+                "open": 11,
+                "close": 24
+            }
+        },
+        {
+            "id": 2,
+            "name": "SOUND STUDIO FILL IN",
+            "room": [{
+                "id": 1,
+                "name": "Aスタジオ",
+                "price": 2000,
+                "maxMembers": 6
+            },
+            {
+                "id": 2,
+                "name": "Bスタジオ",
+                "price": 1500,
+                "maxMembers": 5
+            }
+            ],
+            "businessHours": {
                 "open": 10,
-                "close": 23
+                "close": 25
+            }
+        },
+        {
+            "id": 3,
+            "name": "studio HYBRID",
+            "room": [{
+                "id": 1,
+                "name": "Aスタジオ",
+                "price": 1700,
+                "maxMembers": 4
+            },
+            {
+                "id": 2,
+                "name": "Bスタジオ",
+                "price": 2000,
+                "maxMembers": 4
+            }
+            ],
+            "businessHours": {
+                "open": 9,
+                "close": 28
             }
         }
     ]
