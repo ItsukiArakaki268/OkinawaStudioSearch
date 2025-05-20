@@ -1,0 +1,34 @@
+{
+    "studios": [
+        {
+            "id": 1,
+            "name": "スタジオ1",
+            "price": 1400,
+            "maxMembers": 4,
+            "businessHours": {
+                "open": 8,
+                "close": 17
+            }
+        },
+        {
+            "id": 2,
+            "name": "スタジオ2",
+            "price": 1700,
+            "maxMembers": 4,
+            "businessHours": {
+                "open": 9,
+                "close": 22
+            }
+        },
+        {
+            "id": 3,
+            "name": "スタジオ3",
+            "price": 2000,
+            "maxMembers": 6,
+            "businessHours": {
+                "open": 10,
+                "close": 23
+            }
+        }
+    ]
+}
