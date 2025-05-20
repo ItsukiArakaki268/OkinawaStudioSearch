@@ -38,15 +38,27 @@ async function loadStudios() {
 
 // スタジオ検索
 function searchStudios(people, startTime, endTime) {
-    return studios.filter((studio) => {
+    return studios.map(studio => {
         // 営業時間外の場合は除外
-        if (startTime < studio.businessHours.open || startTime > studio.businessHours.close || endTime < studio.businessHours.open || endTime > studio.businessHours.close) {
-            return false;
+        if (startTime < studio.businessHours.open || startTime > studio.businessHours.close || 
+            endTime < studio.businessHours.open || endTime > studio.businessHours.close) {
+            return null;
         }
-        // // 人数がmaxMembersを超える場合は除外
-        // if (people > studio.maxMembers) return false;
-        return true;
-    })
+        
+        // 人数がmaxMembersを超える場合は除外
+        const availableRooms = studio.room.filter(room => {
+            return Number(people) <= room.maxMembers;
+        });
+
+        if(availableRooms.length > 0) {
+            return {
+                ...studio,
+                availableRooms: availableRooms
+            };
+        }
+
+        return null;
+    }).filter(studio => studio !== null);
 }
 
 // 検索結果の表示
@@ -61,11 +73,7 @@ function displayResults(results) {
         // スタジオ名を表示
         studioElement.innerHTML = `<h3>${studio.name}</h3>`;
 
-        const availableRooms = studio.room.filter(room => {
-            return Number(people.value) <= room.maxMembers;
-        })
-
-        availableRooms.forEach(room => {
+        studio.availableRooms.forEach(room => {
             const roomElement = document.createElement("div");
             roomElement.className = "room-info";
             roomElement.innerHTML = `
