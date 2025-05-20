@@ -39,12 +39,12 @@ async function loadStudios() {
 // スタジオ検索
 function searchStudios(people, startTime, endTime) {
     return studios.filter((studio) => {
-        // 人数がmaxMembersを超える場合は除外
-        if (people > studio.maxMembers) return false;
         // 営業時間外の場合は除外
         if (startTime < studio.businessHours.open || startTime > studio.businessHours.close || endTime < studio.businessHours.open || endTime > studio.businessHours.close) {
             return false;
         }
+        // // 人数がmaxMembersを超える場合は除外
+        // if (people > studio.maxMembers) return false;
         return true;
     })
 }
@@ -57,7 +57,25 @@ function displayResults(results) {
     results.forEach(studio => {
         const studioElement = document.createElement("div");
         studioElement.className = "studio-card";
+
+        // スタジオ名を表示
         studioElement.innerHTML = `<h3>${studio.name}</h3>`;
+
+        const availableRooms = studio.room.filter(room => {
+            return Number(people.value) <= room.maxMembers;
+        })
+
+        availableRooms.forEach(room => {
+            const roomElement = document.createElement("div");
+            roomElement.className = "room-info";
+            roomElement.innerHTML = `
+                <p>ルーム名: ${room.name}</p>
+                <p>料金: ${room.price}円</p>
+                <p>最大人数: ${room.maxMembers}人</p>
+            `;
+            studioElement.appendChild(roomElement);
+        });
+
         resultsContainer.appendChild(studioElement);
-    })
+    });
 }
