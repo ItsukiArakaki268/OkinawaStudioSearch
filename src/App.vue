@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <h1>OkinawaMusicStudio</h1>
-    <p>スタジオ数: {{ studioList.length }}</p>
-    <ul>
-      <li v-for="studio in studioList" :key="studio.id">
+  <div class="app-container">
+    <h1 class="title">OkinawaMusicStudio</h1>
+    <p class="count">スタジオ数: {{ studioList.length }}</p>
+    <ul class="studio-list">
+      <li v-for="studio in studioList" :key="studio.id" class="studio-item">
         {{ studio.name }}
       </li>
     </ul>
@@ -49,4 +49,40 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.app-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.count {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.studio-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.studio-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.studio-item:last-child {
+  border-bottom: none;
+}
+</style>
