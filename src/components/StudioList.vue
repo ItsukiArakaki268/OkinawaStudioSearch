@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h2>検索結果</h2>
+    <h2>
+      検索結果 <span v-if="studios.length">{{ studios.length }}件</span>
+    </h2>
     <ul v-if="studios.length">
       <li v-for="studio in studios" :key="studio.id">
         <div class="studio-card">

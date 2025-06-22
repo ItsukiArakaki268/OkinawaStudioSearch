@@ -64,12 +64,56 @@
           "id": 2,
           "name": "Bスタジオ",
           "price": 2000,
-          "maxMembers": 4
+          "maxMembers": 5
         }
       ],
       "businessHours": {
         "open": 9,
         "close": 28
+      }
+    },
+    {
+      "id": 4,
+      "name": "STUDIO SOUNDSGROW",
+      "room": [
+        {
+          "id": 1,
+          "name": "Aスタジオ",
+          "price": 2000,
+          "maxMembers": 6
+        },
+        {
+          "id": 2,
+          "name": "Bスタジオ",
+          "price": 1600,
+          "maxMembers": 4
+        }
+      ],
+      "businessHours": {
+        "open": 10,
+        "close": 24
+      }
+    },
+    {
+      "id": 5,
+      "name": "ミュージックタウン音市場",
+      "room": [
+        {
+          "id": 1,
+          "name": "Studio2",
+          "price": 1500,
+          "maxMembers": 6
+        },
+        {
+          "id": 2,
+          "name": "Studio3",
+          "price": 1800,
+          "maxMembers": 5
+        }
+      ],
+      "businessHours": {
+        "open": 10,
+        "close": 24
       }
     }
   ]
