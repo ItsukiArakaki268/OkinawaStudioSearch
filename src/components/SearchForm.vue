@@ -1,5 +1,5 @@
 <template>
-  <div class="search-form">
+  <div class="search-form input-container">
     <div class="form-group">
       <label for="people">人数</label>
       <select id="people" v-model="people" class="select">
@@ -24,7 +24,9 @@
       </select>
     </div>
 
-    <button class="submit-btn" @click="handleSubmit">決定</button>
+    <div class="form-group button-group">
+      <button class="submit-btn" @click="handleSubmit">検索</button>
+    </div>
   </div>
 </template>
 
@@ -52,44 +54,77 @@ export default {
 </script>
 
 <style scoped>
-.search-form {
-  background: #f8f9fa;
+.input-container {
+  max-width: 1000px;
+  margin: 0 auto 30px;
   padding: 20px;
-  border-radius: 8px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4カラムに変更 */
+  gap: 20px;
+}
+
+.button-group {
+  justify-content: center;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #333;
-  font-weight: 500;
+label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
 }
 
 .select {
-  width: 100%;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
 .submit-btn {
-  width: 100%;
-  padding: 12px;
-  background: #007bff;
+  padding: 12px 24px;
+  background: #3498db;
   color: white;
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
-  margin-top: 10px;
+  transition: background 0.2s ease;
+  width: 100%;
+  min-width: 80px;
 }
 
 .submit-btn:hover {
-  background: #0056b3;
+  background: #2980b9;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 900px) {
+  .input-container {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+  .button-group {
+    align-items: stretch;
+  }
+  .submit-btn {
+    width: 100%;
+  }
 }
 </style>

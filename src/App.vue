@@ -1,12 +1,6 @@
 <template>
   <div class="app-container">
-    <h1 class="title">OkinawaMusicStudio</h1>
-    <p class="count">スタジオ数: {{ studioList.length }}</p>
-    <ul class="studio-list">
-      <li v-for="studio in studioList" :key="studio.id" class="studio-item">
-        {{ studio.name }}
-      </li>
-    </ul>
+    <h1 class="title">Okinawa Studio Search</h1>
     <SearchForm @submit-form="handleSearchSubmit" />
     <StudioList v-if="searched" :studios="filteredStudios" />
   </div>
@@ -88,39 +82,25 @@ export default {
 </script>
 
 <style>
+body {
+  background: #f5f5f5;
+  min-height: 100vh;
+  margin: 0;
+  font-family:
+    'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+}
+
 .app-container {
-  max-width: 400px;
-  margin: 50px auto;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100vh;
 }
 
 .title {
   text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
-.count {
-  text-align: center;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.studio-list {
-  list-style: none;
-  padding: 0;
+  color: #2c3e50;
   margin-bottom: 30px;
-}
-
-.studio-item {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
-  color: #555;
-}
-
-.studio-item:last-child {
-  border-bottom: none;
+  font-size: 3rem;
 }
 </style>
