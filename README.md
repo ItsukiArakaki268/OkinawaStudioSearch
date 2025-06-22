@@ -1,35 +1,13 @@
-# vue-app
+## Name
 
-This template should help get you started developing with Vue 3 in Vite.
+Okinawa Studio Search
 
-## Recommended IDE Setup
+## Overview
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+沖縄県内の音楽練習スタジオ検索アプリ
 
-## Customize configuration
+## Usage
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+以下のリンクからwebサービスにアクセスできます。
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+[Okinawa Studio Search](https://okinawastudiosearch.onrender.com/ 'Okinawa Studio Search')
