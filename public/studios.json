@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "音楽STUDIO 8528",
+      "city": "宜野湾市",
       "room": [
         {
           "id": 1,
@@ -31,6 +32,7 @@
     {
       "id": 2,
       "name": "SOUND STUDIO FILL IN",
+      "city": "宜野湾市",
       "room": [
         {
           "id": 1,
@@ -53,6 +55,7 @@
     {
       "id": 3,
       "name": "studio HYBRID",
+      "city": "那覇市",
       "room": [
         {
           "id": 1,
@@ -75,6 +78,7 @@
     {
       "id": 4,
       "name": "STUDIO SOUNDSGROW",
+      "city": "与那原町",
       "room": [
         {
           "id": 1,
@@ -97,6 +101,7 @@
     {
       "id": 5,
       "name": "ミュージックタウン音市場",
+      "city": "沖縄市",
       "room": [
         {
           "id": 1,
