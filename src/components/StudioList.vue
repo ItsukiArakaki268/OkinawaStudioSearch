@@ -7,6 +7,7 @@
       <li v-for="studio in studios" :key="studio.id">
         <div class="studio-card">
           <div class="studio-name">{{ studio.name }}</div>
+          <div class="studio-info"><strong>エリア:</strong> {{ studio.city }}</div>
           <div v-for="room in studio.availableRooms" :key="room.id" class="room-info">
             <div class="room-row"><strong>ルーム名:</strong> {{ room.name }}</div>
             <div class="room-row"><strong>料金:</strong> {{ room.price }}円</div>
@@ -64,6 +65,10 @@ li {
   padding-bottom: 8px;
   border-bottom: 2px solid #f0f0f0;
   font-weight: bold;
+}
+
+.studio-info {
+  color: #2c3e50;
 }
 
 .room-info {
