@@ -11,5 +11,3 @@ Okinawa Studio Search
 以下のリンクからwebサービスにアクセスできます。
 
 [Okinawa Studio Search](https://okinawastudiosearch.onrender.com/ 'Okinawa Studio Search')
-
-## TEST
