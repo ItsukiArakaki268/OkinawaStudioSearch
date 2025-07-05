@@ -44,7 +44,7 @@
           "id": 2,
           "name": "Bスタジオ",
           "price": 1500,
-          "maxMembers": 5
+          "maxMembers": 4
         }
       ],
       "businessHours": {
